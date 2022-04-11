@@ -1,0 +1,19 @@
+<div class="main">
+    <h1>Login</h1>
+  
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label for="username">User Name</mat-label>
+        <input type="text" id="username" name="username" ngModel matInput>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label for="email">Password</mat-label>
+        <input type="password" id="password" name="password" ngModel matInput >
+      </mat-form-field>
+  
+      <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+      </p>
+    </form>
+  </div>

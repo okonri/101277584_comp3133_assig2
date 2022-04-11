@@ -1,0 +1,31 @@
+<div class="main">
+
+  <h1>Listings</h1>
+
+  <div *ngIf="loading">
+    Loading...
+  </div>
+  <div *ngIf="error">
+    Error Occurred :(
+  </div>
+  <div>
+    <button mat-button color="primary" routerLink="/newlisting">Add a new listing</button>
+  </div>
+  <div *ngFor="let item of listings">
+    <mat-card class="example-card">
+      <mat-card-content>
+        <mat-card-title>{{item.listing_title}}</mat-card-title>
+        <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+        <mat-card-subtitle>{{item.street}} {{item.postal_code}} {{item.city}}</mat-card-subtitle>
+        <p>Price ${{item.price}} </p>
+        <p>Email {{item.email}} </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" routerLink="/newbooking">Book Stay</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="logOut()" class="main">Logout</button>
+
+</div>

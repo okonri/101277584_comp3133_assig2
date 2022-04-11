@@ -1,0 +1,11 @@
+<nav mat-tab-nav-bar [backgroundColor]="background">
+  <a mat-tab-link routerLink="/listings" *ngIf="isValid; else isLogout">Listings</a>
+  <ng-template #isLogout>
+  <a mat-tab-link routerLink="/login">Login</a>
+  </ng-template>
+  <a mat-tab-link routerLink="/booking">Bookings</a>
+  <a mat-tab-link routerLink="/search">Search Listings</a>
+  <a mat-tab-link routerLink="/register">Register</a>
+</nav>
+
+<router-outlet></router-outlet>
